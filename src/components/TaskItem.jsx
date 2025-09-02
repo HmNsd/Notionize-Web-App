@@ -35,23 +35,26 @@ export default function TaskItem({ todo }) {
             <Circle className="text-stone-500" size={20} />
           )}
         </button>
-        <input
-          type="text"
+
+        <textarea
+          rows="1"
+          wrap="hard"
+          cols="70"
           className={`border outline-none w-full bg-transparent rounded-lg ${
             isTodoEditable
               ? " border-transparent font-semibold"
               : "border-transparent"
-          }${todo.completed ? "line-through" : ""}`}
+          } ${todo.completed ? "line-through" : ""}`}
           value={todoMessage}
           onChange={(e) => setTodoMessage(e.target.value)}
           readOnly={!isTodoEditable}
-        />
+        ></textarea>
       </div>
       <div>
         <button
           className=" rounded-lg text mr-4 bg-green-500 text-stone-50 p-1 hover:text-green-600 hover:bg-transparent  flex-col gap-10"
           onClick={() => {
-            if (todo.completed) return;
+            if (todo.completed) return ;
             else if (isTodoEditable) {
               editTodo();
             } else setIsTodoEditable((prev) => !prev);

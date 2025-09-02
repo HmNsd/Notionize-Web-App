@@ -62,6 +62,7 @@ export default function App() {
         <div className=" sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[50vw] mx-auto p-6">
           <Header />
           <TaskInput />
+          <hr class={`border-t rounded-full border my-4`} />
 
           {/* Filters
           <div className="flex gap-3 mb-4 justify-center">
