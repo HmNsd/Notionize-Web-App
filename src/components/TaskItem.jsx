@@ -20,7 +20,7 @@ export default function TaskItem({ todo }) {
   return (
     <div
       className={clsx(
-        "flex items-center mt-4 justify-between p-2 rounded-sm shadow-sm border dark:border-gray-700 text-l",
+        " flex items-center mt-4 justify-between p-2 rounded-sm shadow-sm border dark:border-gray-700 text-l",
         todo.completed ? "bg-green-50 dark:bg-green-900/20" : ""
       )}
     >
@@ -39,8 +39,8 @@ export default function TaskItem({ todo }) {
         <textarea
           rows="1"
           wrap="hard"
-          cols="70"
-          className={`border outline-none w-full bg-transparent rounded-lg ${
+          
+          className={`w-[55vw] sm:w-[60vw] md:w-[40vw] lg:w-[35vw]  border outline-none  bg-transparent rounded-lg ${
             isTodoEditable
               ? " border-transparent font-semibold"
               : "border-transparent"

@@ -55,14 +55,14 @@ export default function App() {
         className={clsx(
           " min-h-screen transition-colors",
           darkMode
-            ? "bg-gradient-to-r from-stone-700 via-stone-950 to-stone-700 text-white"
-            : "bg-gradient-to-r from-stone-400 via-white to-stone-400 text-black"
+            ? "bg-gradient-to-r from-stone-700 via-black to-stone-700 text-white"
+            : "bg-gradient-to-r from-gray-400 via-white to-stone-400 text-black"
         )}
       >
-        <div className=" sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[50vw] mx-auto p-6">
+        <div className=" sm:max-w-[90vw] md:max-w-[70vw] lg:max-w-[55vw] mx-auto p-6">
           <Header />
           <TaskInput />
-          <hr class={`border-t rounded-full border my-4`} />
+          <hr className={`border-t rounded-full border my-4`} />
 
           {/* Filters
           <div className="flex gap-3 mb-4 justify-center">
